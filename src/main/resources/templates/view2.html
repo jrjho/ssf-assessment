@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Delivery</title>
+		<link rel="stylesheet" href="/styles.css">
+	</head>
+	<body>
+
+		<h1>Shipping Address</h1>
+
+		<!-- <form method="GET" data-th-action="@{/}" data-th-object="${delivery}"> -->
+			<!-- <form method="GET" data-th-action="@{/cart/shippingaddress}" data-th-object="${delivery}"> -->
+				<!-- <form method="GET" action="/cart/shippingaddress" > -->
+
+					<form method="GET" action="/cart" data-th-object="${shippingaddress}">
+
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td>
+						<input type="text" size="30" placeholder="Your name" name="name">
+						<!-- <div data-th-if="${#fields.hasErrors('name')}">
+							<span data-th-errors="*{name}" data-th-errorclass="error"></span>
+						</div> -->
+					</td>
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td>
+						<input type="text" size="30" placeholder="Your address" name="address">
+						<!-- <div data-th-if="${#fields.hasErrors('address')}">
+							<span data-th-errors="*{address}" data-th-errorclass="error"></span>
+						</div> -->
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td></td>
+					<td>
+						<button type="submit" formmethod="GET" formaction="/">Back</button>
+						<button type="submit" formmethod="POST" formaction="/cart/shippingaddress/quotation">Checkout</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+	</body>
+</html>
